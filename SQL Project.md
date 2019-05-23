@@ -30,7 +30,6 @@ GROUP  BY 1
 ORDER  BY 2 DESC 
 ```
 
-![alt text](Query 1.png)
 
 ***
 
