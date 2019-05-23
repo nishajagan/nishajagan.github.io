@@ -34,7 +34,7 @@ ORDER  BY 2 DESC
 
 **2. Which country has the most total orders?**
 ```sql
-ELECT C.Country, 
+SELECT C.Country, 
        sum(I.Total) TotalInvoice 
 FROM   Customer C 
        JOIN Invoice I 
