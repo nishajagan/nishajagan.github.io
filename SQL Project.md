@@ -30,6 +30,8 @@ GROUP  BY 1
 ORDER  BY 2 DESC 
 ```
 
+![Query 1](Query 1.png)
+
 ***
 
 **2. Which country has the most total orders?**
