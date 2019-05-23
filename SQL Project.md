@@ -29,7 +29,7 @@ FROM   PlaylistTrack PT
 GROUP  BY 1 
 ORDER  BY 2 DESC 
 ```
-
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/query1.png)
 
 ***
 
