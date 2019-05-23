@@ -45,6 +45,7 @@ ORDER  BY 2 DESC
 LIMIT  10 
 ```
 
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/query2.png)
 
 ***
 
@@ -64,6 +65,7 @@ WHERE  G.NAME = 'Rock'
 GROUP  BY 1 
 ```
 
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/query3.png)
 
 ***
 
@@ -82,3 +84,7 @@ FROM   Invoice I
 WHERE  G.NAME In ("Alternative & Punk", "Blues", "Jazz", "Latin", "Reggae", "Rock") 
 GROUP  BY 1, 3
 ```
+
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/query4.png)
+
+***
