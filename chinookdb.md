@@ -1,4 +1,4 @@
-1. Provide a query that shows the most purchased Media Type.
+**1. Provide a query that shows the most purchased Media Type.**
 ```sql
 SELECT Sum(invoice.total) AS TotalSales, 
        track.name, 
@@ -17,7 +17,7 @@ ORDER  BY totalsales DESC
 ---
 
 
-2. Provide a query that shows the top 3 best-selling artists.
+**2. Provide a query that shows the top 3 best-selling artists.**
 ```sql
 SELECT Sum(invoiceline.quantity) AS NumberOfTracksSold, 
        track.name, 
@@ -41,7 +41,7 @@ LIMIT  3
 
 
 
-3. Provide a query that shows the top 5 most purchased tracks over all.
+**3. Provide a query that shows the top 5 most purchased tracks over all.**
 ```sql
 SELECT Sum(invoiceline.quantity) AS NumberOfTracksSold, 
        track.name, 
@@ -59,7 +59,7 @@ LIMIT  5
 ---
 
 
-4. Provide a query that shows total sales made by each sales agent.
+**4. Provide a query that shows total sales made by each sales agent.**
 ```sql
 SELECT employee.firstname, 
        employee.lastname, 
@@ -76,7 +76,7 @@ GROUP  BY employee.employeeid
 
  
 
-5. Provide a query that shows all Invoices but includes the # of invoice line items.
+**5. Provide a query that shows all Invoices but includes the # of invoice line items.**
 ```sql
 SELECT invoice.invoiceid, 
        Count(invoiceline.invoicelineid) AS NumberOfInvoiceLines 
@@ -89,7 +89,7 @@ GROUP  BY invoice.invoiceid
 ---
 
 
-6. Provide a query that shows all the Tracks but displays no IDs. The resultant table should include the Album name, Media type and Genre.
+**6. Provide a query that shows all the Tracks but displays no IDs. The resultant table should include the Album name, Media type and Genre.**
 ```sql
 SELECT album.title    AS AlbumTitle, 
        track.NAME     AS TrackName, 
@@ -107,7 +107,7 @@ FROM   track
 ---
 
 
-7. Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
+**7. Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.**
 ```sql
 SELECT pl.NAME, 
        Count(pt.trackid) 
@@ -120,7 +120,7 @@ GROUP  BY pl.NAME
 ---
 
 
-8. Provide a query that includes the purchased track name AND artist name with each invoice line item.
+**8. Provide a query that includes the purchased track name AND artist name with each invoice line item.**
 ```sql
 SELECT invoicelineid, 
        track.NAME  AS TrackName, 
@@ -137,7 +137,7 @@ FROM   track
 ---
 
 
-9. Provide a query that includes the track name with each invoice line item.
+**9. Provide a query that includes the track name with each invoice line item.**
 ```sql
 SELECT invoicelineid, 
        track.NAME 
@@ -149,7 +149,7 @@ FROM   track
 ---
 
 
-10. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
+**10. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.**
 ```sql
 SELECT total, 
        customer.firstname AS CustFirstName, 
@@ -168,7 +168,7 @@ FROM   invoice
 ---
 
 
-11. Provide a query that shows the most purchased track of 2013.
+**11. Provide a query that shows the most purchased track of 2013.**
 ```sql
 SELECT *, 
        Count(t.trackid) AS COUNT 
@@ -185,7 +185,7 @@ ORDER  BY count DESC
 ---
 
 
-12. Provide a query that shows the # of customers assigned to each sales agent.
+**12. Provide a query that shows the # of customers assigned to each sales agent.**
 ```sql
 SELECT e.*, 
        Count(c.customerid) AS 'TotalCustomers' 
@@ -199,7 +199,7 @@ GROUP  BY e.employeeid
 
 
 
-13. Which sales agent made the most in sales over all?
+**13. Which sales agent made the most in sales over all?**
 ```sql
 SELECT *, 
        Max(total) 
@@ -217,7 +217,7 @@ FROM   (SELECT e.*,
 
 
 
-14. Which sales agent made the most in sales in 2010?
+**14. Which sales agent made the most in sales in 2010?**
 ```sql
 SELECT *, 
        Max(total) 
@@ -236,7 +236,7 @@ FROM   (SELECT e.*,
 
 
 
-15. Which sales agent made the most in sales in 2009?
+**15. Which sales agent made the most in sales in 2009?**
 ```sql
 SELECT *, 
        Max(total) 
@@ -255,7 +255,7 @@ FROM   (SELECT e.*,
 
 
 
-16. Provide a query that shows total sales made by each sales agent.
+**16. Provide a query that shows total sales made by each sales agent.**
 ```sql
 SELECT e.*, 
        Count(i.invoiceid) AS 'Total Number of Sales' 
@@ -271,7 +271,7 @@ GROUP  BY e.employeeid
 
 
 
-17. Provide a query that shows all the Tracks but displays no IDs. The resultant table should include the Album name, Media type and Genre.
+**17. Provide a query that shows all the Tracks but displays no IDs. The resultant table should include the Album name, Media type and Genre.**
 ```sql
 SELECT t.NAME  AS 'track', 
        t.composer, 
@@ -294,7 +294,7 @@ FROM   track AS t
 
 
 
-18. Provide a query that includes the purchased track name AND artist name with each invoice line item.
+**18. Provide a query that includes the purchased track name AND artist name with each invoice line item.**
 ```sql
 SELECT i.*, 
        t.NAME  AS 'track', 
@@ -312,7 +312,7 @@ FROM   invoiceline AS i
 
 
 
-19. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
+**19. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.**
 ```sql
 SELECT e.firstname AS 'employee first', 
        e.lastname  AS 'employee last', 
@@ -331,7 +331,7 @@ FROM   employee AS e
 
 
 
-20. Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name.
+**20. Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name.**
 ```sql
 SELECT   e.firstname, 
          e.lastname, 
@@ -354,7 +354,7 @@ ORDER BY e.employeeid
 
 
 
-21. Find the customer that has spent the most on music for each country.
+**21. Find the customer that has spent the most on music for each country.**
 ```sql
 WITH t1 AS 
 ( 
@@ -389,7 +389,7 @@ LIMIT 7
 
 
 
-22. How many rock songs were purchased from each country
+**22. How many rock songs were purchased from each country**
 ```sql
 SELECT i.billingcountry Country, 
        Count(*)         RockSongsPurchased 
@@ -411,7 +411,7 @@ LIMIT  7
 
 
 
-23. How yearly income varies according to genre
+**23. How yearly income varies according to genre**
 ```sql
 SELECT   Strftime('%Y', i.invoicedate)   year, 
          Sum(il.quantity * il.unitprice) income, 
@@ -436,7 +436,7 @@ GROUP BY 1,
 
 
 
-24. How monthly income varies in 2013 for Rock genre
+**24. How monthly income varies in 2013 for Rock genre**
 ```sql
 SELECT Strftime('%Y', i.invoicedate)   Year, 
        Strftime('%m', i.invoicedate)   Month, 
