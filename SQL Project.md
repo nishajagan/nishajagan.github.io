@@ -29,7 +29,7 @@ FROM   PlaylistTrack PT
 GROUP  BY 1 
 ORDER  BY 2 DESC 
 ```
-![](https://github.com/nishajagan/nishajagan.github.io/blob/master/query1.png)
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/Images/query1.png)
 
 ***
 
@@ -45,7 +45,7 @@ ORDER  BY 2 DESC
 LIMIT  10 
 ```
 
-![](https://github.com/nishajagan/nishajagan.github.io/blob/master/query2.png)
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/Images/query2.png)
 
 ***
 
@@ -65,7 +65,7 @@ WHERE  G.NAME = 'Rock'
 GROUP  BY 1 
 ```
 
-![](https://github.com/nishajagan/nishajagan.github.io/blob/master/query3.png)
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/Images/query3.png)
 
 ***
 
@@ -85,6 +85,6 @@ WHERE  G.NAME In ("Alternative & Punk", "Blues", "Jazz", "Latin", "Reggae", "Roc
 GROUP  BY 1, 3
 ```
 
-![](https://github.com/nishajagan/nishajagan.github.io/blob/master/query4.png)
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/Images/query4.png)
 
 ***
