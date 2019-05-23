@@ -1,0 +1,64 @@
+SQL FOR DATA ANALYSIS
+
+In this project, you will query a digital music store database which holds information regarding the store’s media, employees, 
+and customers. You will use the database to help the store gain an understanding of the types of music that are purchased, 
+where customers live, and how the company might optimize their business practices.
+
+
+Skills: SQL
+
+
+Which Playlist has the most tracks?
+
+SELECT P.NAME   PlaylistName, 
+       Count(*) "Number of Tracks" 
+FROM   PlaylistTrack PT 
+       JOIN Playlist P 
+         ON PT.PlaylistId = P.PlaylistId 
+GROUP  BY 1 
+ORDER  BY 2 DESC 
+
+
+Which country has the most total orders?
+
+SELECT C.Country, 
+       sum(I.Total) TotalInvoice 
+FROM   Customer C 
+       JOIN Invoice I 
+         ON C.CustomerId = I.CustomerId 
+GROUP  BY 1 
+ORDER  BY 2 DESC 
+LIMIT  10 
+
+
+What is the monthly income for Rock genre in 2009?
+
+SELECT strftime('%m', I.InvoiceDate)   Month, 
+       sum(IL.Quantity * IL.UnitPrice) Income 
+FROM   Invoice I 
+       JOIN InvoiceLine IL 
+         ON I.InvoiceId = IL.InvoiceId 
+       JOIN Track T 
+         ON T.TrackId = IL.TrackId 
+       JOIN Genre G 
+         ON T.GenreId = G.GenreId 
+WHERE  G.NAME = 'Rock' 
+       AND strftime('%Y', I.InvoiceDate) = '2009' 
+GROUP  BY 1 
+
+
+
+What is the yearly income according to genre?
+
+SELECT strftime('%Y', I.InvoiceDate)   Year, 
+       sum(IL.Quantity * IL.UnitPrice) Income,
+	   G.Name 						   Genre_Name
+FROM   Invoice I 
+       JOIN InvoiceLine IL 
+         ON I.InvoiceId = IL.InvoiceId 
+       JOIN Track T 
+         ON T.TrackId = IL.TrackId 
+       JOIN Genre G 
+         ON T.GenreId = G.GenreId 
+WHERE  G.NAME In ("Alternative & Punk", "Blues", "Jazz", "Latin", "Reggae", "Rock") 
+GROUP  BY 1, 3
