@@ -42,7 +42,7 @@ This dashboard (Monthly Delays) consists of three worksheets – Monthly Average
 * In the month of June, Spirit Airlines, has the most percentage of flights cancelled (4.63% or 23 cancelled flights)
 
 
-
+---
 
 
 **Insight (Dashboard) 2**
@@ -58,7 +58,7 @@ This dashboard(Delays by Airlines) consists of three worksheets – Reasons for 
 * For Alaska Airlines, we can see that the total delay is cause by late aircraft delay and is the most in the month of January (2599) and the least in April (852)
 
 
-
+---
 
 
 **Insight (Worksheet) 3**
