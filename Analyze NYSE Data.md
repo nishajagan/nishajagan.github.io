@@ -22,14 +22,19 @@ Here are the three tasks that you will complete in the final project.
 
 2. Create a presentation that provides at least one visualization to help with your answer. This visualization might be a bar chart, histogram, scatterplot, box-plot or other visual that you learned to make. Include your insights from the measures of center and spread and at least one numeric summary statistic in the description.
 
-
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/Images/nyse.png)
 
 **Task 2:**
 
 Create a dashboard for a Profit and Loss Statement that calculates the Gross Profit, Operating Profit or EBIT for a company selected from a drop-down list. Your drop-down list should pull historical fundamentals data to create the P&L Statement. The P&L statement should include the Gross Profit, Operating Profit or EBIT values for all the years there is historical data available for that company in the dataset.
 
 
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/Images/pldashboard.png)
+
 
 **Task 3:**
 
 Create a financial model for a company of your choice that forecasts out the Gross Profit, Operating Profit or EBIT for two more years using three scenarios (Best case, Weak case and Base case). Your assumptions for revenue growth, gross margin and operating margin should change for each scenario.
+
+
+![](https://github.com/nishajagan/nishajagan.github.io/blob/master/Images/financemodel.png)
