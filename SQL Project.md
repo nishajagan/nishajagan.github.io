@@ -20,92 +20,64 @@ You will need to follow the instructions on the next three concepts to get the C
 ---
 
 **1. Which Playlist has the most tracks?**
-
-SELECT P.NAME   PlaylistName, Count(*) "Number of Tracks" 
-
+```sql
+SELECT P.NAME   PlaylistName, 
+       Count(*) "Number of Tracks" 
 FROM   PlaylistTrack PT 
-
-JOIN Playlist P 
-
-ON PT.PlaylistId = P.PlaylistId 
-
+       JOIN Playlist P 
+         ON PT.PlaylistId = P.PlaylistId 
 GROUP  BY 1 
-
 ORDER  BY 2 DESC 
-
+```
 
 ***
 
 **2. Which country has the most total orders?**
-
-SELECT C.Country, sum(I.Total) TotalInvoice 
-
+```sql
+ELECT C.Country, 
+       sum(I.Total) TotalInvoice 
 FROM   Customer C 
-
-JOIN Invoice I 
-
-ON C.CustomerId = I.CustomerId 
-
+       JOIN Invoice I 
+         ON C.CustomerId = I.CustomerId 
 GROUP  BY 1 
-
 ORDER  BY 2 DESC 
-
 LIMIT  10 
+```
 
 
 ***
 
 **3. What is the monthly income for Rock genre in 2009?**
-
+```sql
 SELECT strftime('%m', I.InvoiceDate)   Month, 
-
-sum(IL.Quantity * IL.UnitPrice) Income 
-
+       sum(IL.Quantity * IL.UnitPrice) Income 
 FROM   Invoice I 
-
-JOIN InvoiceLine IL 
-
-ON I.InvoiceId = IL.InvoiceId 
-
-JOIN Track T 
-
-ON T.TrackId = IL.TrackId 
-
-JOIN Genre G 
-
-ON T.GenreId = G.GenreId 
-
+       JOIN InvoiceLine IL 
+         ON I.InvoiceId = IL.InvoiceId 
+       JOIN Track T 
+         ON T.TrackId = IL.TrackId 
+       JOIN Genre G 
+         ON T.GenreId = G.GenreId 
 WHERE  G.NAME = 'Rock' 
-
-AND strftime('%Y', I.InvoiceDate) = '2009' 
-
+       AND strftime('%Y', I.InvoiceDate) = '2009' 
 GROUP  BY 1 
+```
 
 
 ***
 
 **4. What is the yearly income according to genre?**
-
+```sql
 SELECT strftime('%Y', I.InvoiceDate)   Year, 
-
-sum(IL.Quantity * IL.UnitPrice) Income,
-
-G.Name Genre_Name
-
+       sum(IL.Quantity * IL.UnitPrice) Income,
+     G.Name                Genre_Name
 FROM   Invoice I 
-
-JOIN InvoiceLine IL 
-
-ON I.InvoiceId = IL.InvoiceId 
-
-JOIN Track T 
-
-ON T.TrackId = IL.TrackId 
-
-JOIN Genre G 
-
-ON T.GenreId = G.GenreId 
-
+       JOIN InvoiceLine IL 
+         ON I.InvoiceId = IL.InvoiceId 
+       JOIN Track T 
+         ON T.TrackId = IL.TrackId 
+       JOIN Genre G 
+         ON T.GenreId = G.GenreId 
 WHERE  G.NAME In ("Alternative & Punk", "Blues", "Jazz", "Latin", "Reggae", "Rock") 
-
 GROUP  BY 1, 3
+```
