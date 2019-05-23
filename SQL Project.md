@@ -19,7 +19,7 @@ You will need to follow the instructions on the next three concepts to get the C
 
 ---
 
-**Which Playlist has the most tracks?**
+**1. Which Playlist has the most tracks?**
 
 SELECT P.NAME   PlaylistName, Count(*) "Number of Tracks" 
 
@@ -34,7 +34,9 @@ GROUP  BY 1
 ORDER  BY 2 DESC 
 
 
-**Which country has the most total orders?**
+
+
+**2. Which country has the most total orders?**
 
 SELECT C.Country, sum(I.Total) TotalInvoice 
 
@@ -51,7 +53,9 @@ ORDER  BY 2 DESC
 LIMIT  10 
 
 
-**What is the monthly income for Rock genre in 2009?**
+
+
+**3. What is the monthly income for Rock genre in 2009?**
 
 SELECT strftime('%m', I.InvoiceDate)   Month, 
 
@@ -79,7 +83,8 @@ GROUP  BY 1
 
 
 
-**What is the yearly income according to genre?**
+
+**4. What is the yearly income according to genre?**
 
 SELECT strftime('%Y', I.InvoiceDate)   Year, 
 
