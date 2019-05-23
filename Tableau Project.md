@@ -27,6 +27,8 @@ You can also come up with your own question!
 As you work with the data, come up with a question you're curious about and can be answered from the data. Build a dashboard or story to answer your question and lead viewers to that answer.
 
 
+---
+
 **Insight (Dashboard) 1**
 
 [https://public.tableau.com/profile/nisha4435#!/vizhome/BuildDataDashboards_15584148431290/MonthlyDelays?publish=yes]
@@ -40,17 +42,23 @@ This dashboard (Monthly Delays) consists of three worksheets – Monthly Average
 * In the month of June, Spirit Airlines, has the most percentage of flights cancelled (4.63% or 23 cancelled flights)
 
 
+
+
+
 **Insight (Dashboard) 2**
 
 [https://public.tableau.com/profile/nisha4435#!/vizhome/BuildDataDashboards_15584148431290/DelaysbyAirlines?publish=yes[
 
 This dashboard(Delays by Airlines) consists of three worksheets – Reasons for Cancellations, Average Delays by Airlines and Total Delays by Month. Each of these worksheets are using the filter ‘Airline. This dashboard gives us an overview of which airline has the most delays based on the airlines.
 
-*For Alaska Airlines, the only reasons for cancellation are Airline (13 flights cancelled) and Weather (9 flights cancelled).
+* For Alaska Airlines, the only reasons for cancellation are Airline (13 flights cancelled) and Weather (9 flights cancelled).
 
-*For Alaska Airline, the average delay is mostly due to late aircraft delay (16.96) and the least is due to security (0.34)
+* For Alaska Airline, the average delay is mostly due to late aircraft delay (16.96) and the least is due to security (0.34)
 
-*For Alaska Airlines, we can see that the total delay is cause by late aircraft delay and is the most in the month of January (2599) and the least in April (852)
+* For Alaska Airlines, we can see that the total delay is cause by late aircraft delay and is the most in the month of January (2599) and the least in April (852)
+
+
+
 
 
 **Insight (Worksheet) 3**
