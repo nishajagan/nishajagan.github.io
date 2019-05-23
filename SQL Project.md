@@ -34,7 +34,7 @@ GROUP  BY 1
 ORDER  BY 2 DESC 
 
 
-
+***
 
 **2. Which country has the most total orders?**
 
@@ -53,7 +53,7 @@ ORDER  BY 2 DESC
 LIMIT  10 
 
 
-
+***
 
 **3. What is the monthly income for Rock genre in 2009?**
 
@@ -82,7 +82,7 @@ AND strftime('%Y', I.InvoiceDate) = '2009'
 GROUP  BY 1 
 
 
-
+***
 
 **4. What is the yearly income according to genre?**
 
